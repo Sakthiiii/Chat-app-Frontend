@@ -1,0 +1,76 @@
+.group-chat-status {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    overflow: scroll;
+    height: 100vh;
+
+    @include respond(tab-land) {
+        width: $sidebar-size-tab-land;
+    }
+
+
+    @include respond(tab-port) {
+        position: absolute;
+        right: 0;
+        left: $sidebar-size-tab-land;
+        width: 70%;
+    }
+
+    @include respond(tab-port) {
+        right: 0;
+        left: $sidebar-size-tab-port;
+        width: 60%;
+    }
+
+    @include respond(phone) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.group-info-header {
+    background-color: $color-grey-light;
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    border: 1px solid $color-grey-1;
+    font-size: 1.6rem;
+
+    .btn {
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $color-grey-2;
+        }
+    }
+}
+
+.group-main-details, .participants, .exit-group {
+    margin-bottom: 1rem;
+    border: 2px solid $color-grey-light;
+    background-color: $color-light-primary;
+}
+
+.participants > p {
+    font-weight: 500;
+    padding: .7rem 2rem;
+}
+
+.group-main-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    
+    .pfp {
+        margin-bottom: 1rem;
+    }
+}
+
+.exit-group {
+    padding: 1em;
+    display: flex;
+}

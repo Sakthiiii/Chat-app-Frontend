@@ -1,0 +1,144 @@
+.chat-panel {
+    width: $sidebar-size;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+
+    @include respond(tab-land) {
+        width: $sidebar-size-tab-land;
+    }
+
+    @include respond(tab-port) {
+        width: $sidebar-size-tab-port;
+    }
+
+    @include respond(phone) {
+        width: 100vw;
+    }
+
+    &-header {
+        background-color: $color-grey-light;
+        padding: 1rem 1.6rem;
+
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        .pfp {
+            margin-right: 1.5rem;
+        }
+
+        .person-info {
+            margin-right: auto;
+        }
+
+        .three-dots {
+            margin-left: 1rem;
+        }
+
+        .username {
+            font-size: 1.8rem;
+        }
+
+        .email {
+            font-size: 1.2rem;
+        }
+
+        .btn-add-chat {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+
+            @include respond(tab-port) {
+                display: none;
+            }
+        }
+
+        .pfp-img, .person-info {
+            cursor: pointer;
+        }
+    }
+
+    ul {
+        flex: 1;
+        overflow-y: scroll;
+    }
+}
+
+// add chat form
+.add-chat, .user-info {
+    position: absolute;
+    height: 100vh;
+    width: $sidebar-size;
+    
+    @include respond(tab-land) {
+        width: $sidebar-size-tab-land;
+    }
+
+    @include respond(tab-port) {
+        width: $sidebar-size-tab-port;
+    }
+
+    @include respond(phone) {
+        width: 100vw;
+    }
+
+    transition: transform .3s ease-out;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+  
+    &.hidden {
+        transform: translateX(-100%);
+    }
+  
+    &-header {
+        display: flex;
+        justify-content: flex-start;
+        padding: 1.5em 2em;
+        padding-top: 4em;
+        background-color: $color-primary-3;
+        color: #fff;
+  
+        .header {
+            font-size: 2rem;
+            display: flex;
+        }
+  
+        .close-btn {
+            background-color: transparent;
+            padding: 0 1rem 0 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.user-main-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    p {
+        font-size: 1.8rem;
+        margin-top: .6rem;
+    }
+    
+    h3 {
+        margin-top: 1.2rem;
+        font-size: 2.4rem;
+    }
+
+    .actions {
+        width: 100%;
+        height: fit-content;
+        background-color: $color-grey-3;
+        margin: 3rem 2rem 1rem;
+        padding: 1.5rem;
+    }
+}

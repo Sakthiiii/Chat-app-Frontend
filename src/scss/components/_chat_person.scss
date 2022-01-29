@@ -1,0 +1,45 @@
+.chat-heading {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 1.3rem;
+    background-color: $color-grey-light;
+    border: 1px solid $color-grey-1;
+}
+
+.chat-person {
+    margin-left: 1.3rem;
+    cursor: pointer;
+
+    &-name {
+        font-weight: 500;
+    }
+
+    &-status {
+        color: $color-grey-dark;
+    }
+}
+
+.exit {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    img {
+        margin-right: 2rem;
+        margin-left: 1rem;
+    }
+
+    &:hover {
+        color: red;
+
+        img {
+            filter: invert(11%) sepia(92%) saturate(7457%) hue-rotate(1deg) brightness(108%) contrast(110%);
+        }
+    }
+}
+
+.three-dots {
+    margin-left: auto;
+    cursor: pointer;
+}

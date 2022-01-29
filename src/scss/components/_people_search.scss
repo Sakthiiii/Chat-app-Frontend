@@ -1,0 +1,75 @@
+.people-search {
+    flex: 1;
+    overflow-y: scroll;
+
+    &-item {
+        padding: 0 0 0 1.5rem;
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+
+        &:hover {
+            background-color: $color-grey-hover;
+        }
+
+        &.selected {
+            position: relative;
+            background-color: $color-grey-hover;
+
+            .pfp {
+                width: $pfp-sm;
+                height: $pfp-sm;
+                margin-left: 0.5rem;
+                margin-right: 1rem;
+                margin-bottom: 1rem;
+
+                &::before {
+                    content: '\2714';
+                    background-color: $color-primary;
+                    color: #fff;
+                    
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 100%;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    
+                    position: absolute;
+                    bottom: 1.2rem;
+                    left: 4rem;
+                }
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        width: $space-scroll;
+    }
+   
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $color-scroll-bar;
+        border-radius: 0;
+    }
+}
+
+.form.form-room-name {
+    padding: 0 1.5rem;
+    margin: 0;
+
+    @include respond(tab-port) {
+        display: block;
+    }
+}
+
+.form .input.chat-room-name {
+    margin: 0;
+}

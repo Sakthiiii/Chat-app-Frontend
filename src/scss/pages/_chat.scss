@@ -1,0 +1,60 @@
+.chat-container-main {
+    display: flex;
+}
+
+.chat-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    
+    &.visible {
+        height: 100vh;
+        overflow-y: hidden;
+    }
+    
+    @include respond(phone) {
+        position: absolute;
+        // control display none from react
+        // display: none;
+        width: 100vw;
+        height: 0px;
+    }
+}
+
+.back-btn {
+    display: none;
+    
+    img {
+        filter: invert(1);
+    }
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: .7rem;
+
+    margin-left: -.2rem;
+
+    @include respond(phone) {
+        display: flex;
+    }
+}
+
+.chat-box {
+    flex-grow: 1;
+    background-image: url('../../images/whatsapp-web-background.png');
+    overflow-y: scroll;
+    padding-bottom: 0;
+}
+
+// chat-right-panel
+.group-chat-status {
+    width: $chat-group-status-bar-size;
+    display: none;
+
+    &.visible {
+        display: block;
+    }
+}

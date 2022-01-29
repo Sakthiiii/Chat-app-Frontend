@@ -1,0 +1,46 @@
+// light colors
+$color-light-primary: #fff;
+$color-grey-1: #c7c7c7;
+$color-grey-2: #e8e8e8;
+$color-grey-3: #f1f1f1;
+$color-grey-4: #ebebeb;
+$color-grey-light: #EDEDED;
+$color-grey-dark: #767676;
+$color-grey-hover: #F5F5F5;
+$color-grey-empty-chat: #F8F9FA;
+$color-black: #000;
+
+// primary colors
+$color-primary: #295F61;
+$color-primary-2: #547F81;
+$color-primary-3: #54C0A6;
+
+// secondary colors
+$color-secondary: #00FF38;
+
+// banner colours
+$color-danger: #ff0000;
+$color-blue: #3BA5F4;
+
+// misc. colors
+$color-form-placeholders: #959595;
+$color-scroll-bar: rgba($color: #777777, $alpha: 0.5);
+$opaqueWhite: rgba($color: #eee, $alpha: 1);
+
+// lengths
+// profile pic size:
+$pfp-size: 3.9rem;
+$pfp-md: 5rem;
+$pfp-sm: 3.5rem;
+$pfp-xl: 20rem;
+$space-scroll: 10px;
+$sidebar-size: 25%;
+$sidebar-size-tab-land: 30%;
+$sidebar-size-tab-port: 40%;
+$chat-group-status-bar-size: 25%;
+
+// MEDIA BREAKPOINTS
+$resp-phone: 37.5em;
+$resp-tab-port: 56.25em;
+$resp-tab-land: 75em;
+$resp-big-desk: 112.5em;
